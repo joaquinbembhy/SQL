@@ -344,25 +344,3 @@ where WGPA > (select avg(WGPA)
 
 select * from WGPAs;
 select avg(WGPA) from WGPAs;
-
--
-
-
-
-select ProjectName, CustomerName, NumberOfActivities, NumberOfHours, City, StartDate
-from ProjectAct PA natural join Project natural join Customer natural join City 
-join Date D on PA.StartDateId = D.DateId
-where NumberOfActivities > 20 and 
-	  NumberOfHours > 100 and
-	  StartDate(year) = 2002 and
-	  Customer.CityId in (select City.CityId 
-						  from City 
-                          where City.City = ‘Milano’);
-                          
-                          
-select sid, count(*)
-from exam
-group by sid
-having count(*) >= ALL (select count(*)
-						from exam
-                        group by sid);
