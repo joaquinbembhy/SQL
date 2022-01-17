@@ -1,3 +1,5 @@
+#Video Games SQL Exploration
+
 This SQL exploration analysis is based on the kaggle video games database.
 It consisted on an exploratory analysis based on the given file, to try and find out important insights about the sales of videogames.
 
